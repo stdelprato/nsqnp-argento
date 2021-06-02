@@ -1,0 +1,180 @@
+*{
+    font-family: Helvetica, sans-serif, Arial;
+    list-style-type: none;
+}
+
+body{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 90%;
+    max-width: 1200px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 0.4fr 1.6fr;
+    grid-template-rows: 0.3fr 1.8fr 0.9fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    "menu-1 menu-2"
+    "chat tabletop"
+    "white-cards white-cards";
+}
+
+#white-cards-container {
+    user-select: none;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+    ". . . . . . .";
+    grid-area: white-cards;
+    padding: 10px;
+}
+
+.tabletop {
+    display: grid;
+    grid-template-columns: 0.4fr 1.7fr;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+    "black-card-main white-placeholder"
+    "black-card-main white-placeholder";
+    grid-area: tabletop;
+    border: 1px solid black;
+}
+
+#black-card { 
+    grid-area: black-card-main; 
+    border: 1px solid black;
+    display: flex;
+    align-items: center;
+}
+
+.white-placeholder {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 0px 0px;
+    grid-template-areas:
+    ". . . .";
+    grid-area: white-placeholder;
+    justify-items: center;
+    align-items: center;
+}
+
+.white-cards-table { 
+    grid-area: white-cards-table; 
+    border: 1px solid black;
+}
+
+#chat-container {
+    grid-area: chat;
+    border: 1px solid black;
+    position: relative;
+}
+
+#input_send {
+    display: flex;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#mensajes {
+    margin: 0;
+    overflow-y:auto;
+    overflow-x: hidden;
+    height: 45vh;
+    width: 16.5vw;
+    padding: 5px;
+    hyphens: auto;
+    font-size: 16px;
+}
+
+#message-input{
+    height: 22px;
+    width: auto;
+}
+
+#send-button { 
+    display:inline-block;
+    /* width: 80px; */
+    padding:0.35em 1.2em;
+    border:0.1em solid #FFFFFF;
+    /* margin:0 0.3em 0.3em 0; */
+    border-radius:0.12em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#353535;
+    text-align:center;
+    transition: all 0.2s;
+    border: 1px solid black;
+}
+
+#send-button:hover{
+    color:#000000;
+    background-color:#807f7f;
+}
+
+@media all and (max-width:30em){
+    a.button1{
+        display:block;
+        margin:0.4em auto;
+    }
+} 
+
+.blacks { 
+    grid-area: blacks; 
+    border: 1px solid black;
+}
+
+.menu-1 { 
+    grid-area: menu-1; 
+    border: 1px solid black;
+}
+
+.menu-2 { 
+    grid-area: menu-2; 
+    border: 1px solid black;
+}
+
+.card{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 90px;
+    height: 140px;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 12px;
+    color: black;
+    font-size: 11px;
+    hyphens: manual;
+}
+
+.white-card {
+    background-color: white;
+}
+
+.black-card{
+    background-color: black;
+    color: white;
+    margin: auto;
+}
+
+.placeholder-card {
+    background-color: rgb(248, 248, 248);
+    border-color: grey;
+    margin: 5px;
+}
