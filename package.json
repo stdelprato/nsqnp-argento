@@ -16,6 +16,7 @@
   "license": "ISC",
   "dependencies": {
     "@socket.io/admin-ui": "^0.1.1",
+    "bcrypt-nodejs": "0.0.3",
     "express": "^4.17.1",
     "socket.io": "^4.1.2"
   },
@@ -23,6 +24,6 @@
     "nodemon": "^2.0.7"
   },
   "engines": {
-    "node": "14.x"
+    "node": "14.15.4"
   }
 }
