@@ -29,11 +29,3 @@ server.on('error', (err) => {
 server.listen(8080, () =>{
    console.log('RPS started on 8080'); 
 });
-
-// app.set('appPath', 'public');
-// app.use(express.static(__dirname));
-
-// app.route('/*')
-//   .get(function(req, res) {
-//     res.sendfile(app.get('appPath') + '/index.html');
-// });
