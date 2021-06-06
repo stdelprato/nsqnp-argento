@@ -13,8 +13,8 @@ const server = http.createServer(app);
 
 const io = socketio(server);
 
-io.on('connection', (sock) => {
-    console.log('Someone connected');
+io.on('connection', sock => {
+    console.log(`Someone connected: ${sock.id}`);
     sock.emit('message', 'que onda papucho')
 
     sock.on('message', text => {

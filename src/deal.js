@@ -19,7 +19,9 @@ fetch(cards_path_json)
         
         let cantidadJugadores = 6;
         let allPlaceholders;
-        let jugador1 = [];
+
+
+        console.log(asignarMazosAJugadores(cantidadJugadores, white_deck_copy));
 
         
         repartirManoInicialCadaPersona(white_deck_copy, containerIdWhites);

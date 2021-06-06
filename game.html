@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="#">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grid-container">
+        <div id="white-cards-container"></div>
+        <div class="tabletop">
+          <div id="black-card"></div>
+          <div class="white-placeholder"></div>
+        </div>
+        <div id="chat-container">
+          <form id="chat-form">
+            <ul id="mensajes"></ul>
+            <div id="input_send">
+              <input type="text" id="message-input" placeholder="Mensaje" autocomplete="off">
+              <button id="send-button" type="button">Enviar</button>
+              <!-- <label for="room-input">Room</label>
+              <input type="text" id="room-input">
+              <button id="room-button">Join</button> -->
+            </div>
+          </form>
+        </div>
+        <div class="blacks"></div>
+        <div class="menu-1"></div>
+        <div class="menu-2"></div>
+      </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" src="./src/chat.js"></script>
+    <script type="text/javascript" src="./src/deal_functions.js"></script>
+    <script type="text/javascript" src="./src/deal.js"></script>
+    <script type="text/javascript" src="./src/main.js"></script>
+    <script type="text/javascript" src="./src/client.js"></script>
+    <script type="text/javascript" src="./src/functions_backend.js"></script>
+</body>
+</html>
